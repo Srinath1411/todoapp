@@ -2,16 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { todoList } from '../../services/Data'
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import useCounter from '../../services/useCounter';
-import RemoveIcon from '@mui/icons-material/Remove';
-import {Box} from '@mui/material';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
+
+
 function Home() {
   const [todos, setTodos] = useState(todoList);
   const [isEditing, setIsEditing] = useState(false);
   const [editedTask, setEditedTask] = useState('');
   const [editedTaskId, setEditedTaskId] = useState(null);
-  const{result,increment,decrement}=useCounter(0,1);
 
 
   useEffect(() => {
@@ -46,14 +43,10 @@ function Home() {
   }
 
   return (
+    
     <div>
 
-      <p>{result}</p>
-<Box>
-  <RemoveIcon onClick={decrement} sx={{cursor:"pointer",fontSize:'32px',mt:'10px'}}/>
-  <AddCircleIcon onClick={increment} sx={{cursor:"pointer",fontSize:'32px',mt:'10px'}}/>
-
-</Box>
+<h1> Todo app</h1>
 
 
       <ul>
